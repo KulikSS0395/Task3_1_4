@@ -6,10 +6,6 @@ import ru.jm.ds.entity.User;
 
 import java.util.List;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args ) {
@@ -28,6 +24,6 @@ public class App
 
         communication.updateUser(userUpdate);
 
-        communication.deleteUser(3, userUpdate);
+        communication.deleteUser(3);
     }
 }

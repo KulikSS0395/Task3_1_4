@@ -23,8 +23,6 @@ public class Communication {
     private final String URL = "http://91.241.64.178:7081/api/users";
 
     public List<User> getUsers() {
-
-
         ResponseEntity<List<User>> responseEntity =
                 restTemplate.exchange(URL, HttpMethod.GET, null, new ParameterizedTypeReference<List<User>>() {
                 });
@@ -68,7 +66,7 @@ public class Communication {
         System.out.println("user update");
     }
 
-    public void deleteUser(int id, User user) {
+    public void deleteUser(int id) {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("Cookie", sessionID);
         String URLDelete = URL + "/" + id;
