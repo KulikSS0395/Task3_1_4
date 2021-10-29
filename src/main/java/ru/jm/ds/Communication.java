@@ -34,17 +34,6 @@ public class Communication {
     }
 
 
-
-    public User getUser(int id) {
-        HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.add("Cookie", sessionID);
-
-        User user = restTemplate.getForObject(URL + "/" + id, User.class, httpHeaders);
-
-        return user;
-    }
-
-
     public void saveUser(User user) {
 
         HttpHeaders httpHeaders = new HttpHeaders();
